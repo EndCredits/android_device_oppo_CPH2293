@@ -1,0 +1,6 @@
+service fingerprint-inscreen-1-0.CPH2293 /system/bin/hw/lineage.biometrics.fingerprint.inscreen@1.0-service.CPH2293
+    interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
+    class hal
+    user system
+    group system
+    shutdown critical
