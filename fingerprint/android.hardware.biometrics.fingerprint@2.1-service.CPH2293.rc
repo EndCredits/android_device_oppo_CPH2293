@@ -1,4 +1,4 @@
-service fps_hal.realme_sdm710 /system/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.realme_RMX3031
+service fps_hal.oppo_sdm710 /system/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.oppo_RMX3031
     class late_start
     user system
     group system input
