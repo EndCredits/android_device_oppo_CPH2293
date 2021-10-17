@@ -1,0 +1,17 @@
+type hal_lineage_fod_CPH2293, domain;
+hal_server_domain(hal_lineage_fod_CPH2293, hal_lineage_fod)
+
+type hal_lineage_fod_CPH2293_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(hal_lineage_fod_CPH2293)
+
+# Allow access to the HALs
+hal_client_domain(hal_lineage_fod_CPH2293, hal_fingerprint)
+
+# Allow hal_lineage_fod_CPH2293 to hal_fingerprint_hwservice
+allow hal_lineage_fod_CPH2293 hal_fingerprint_hwservice:hwservice_manager find;
+
+# Allow hal_lineage_fod_CPH2293 to read and write to sysfs_fod
+allow hal_lineage_fod_CPH2293 sysfs_fod:file rw_file_perms;
+
+# Allow to use wakelock
+wakelock_use(hal_lineage_fod_CPH2293)
