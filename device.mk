@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6893.rc \
