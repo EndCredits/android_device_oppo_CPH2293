@@ -13,6 +13,5 @@
 
 <resources>
     <dimen name="fingerprint_dot_radius">8dp</dimen>
-    <fraction name="fingerprint_sensor_location_fraction_x">50%</fraction>
-    <fraction name="fingerprint_sensor_location_fraction_y">30%</fraction>
+    <item name="fingerprint_sensor_location_fraction_y" type="fraction">78.59%</item>
 </resources>
