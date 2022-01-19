@@ -1,4 +1,0 @@
-service fps_hal.oppo_sdm710 /system/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.oppo_CPH2293
-    class late_start
-    user system
-    group system input
