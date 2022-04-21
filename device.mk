@@ -92,6 +92,13 @@ PRODUCT_PACKAGES += \
     fstab.mt6893
 
 # NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    com.gsma.services.nfc  \
+    NfcNci \
+    SecureElement \
+    Tag
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nxp-pnscr.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp-pnscr.conf \
     $(LOCAL_PATH)/nfc/libnfc-mtp-SN100.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-mtp-SN100.conf \

@@ -33,6 +33,12 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Iorap
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+    
+# NFC
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.nfc.disPowerSave=1 \
+    persist.nfc.smartcard.recorder.enable=true \
+    persist.sys.nfc.default=on
 
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
