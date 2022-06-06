@@ -11,8 +11,6 @@ on post-fs-data
     # Services
     stop console
 
-on post-fs
-
 on property:init.svc.face_hal=restarting
     stop face_hal
 
@@ -30,7 +28,20 @@ on property:init.svc.face_hal=restarting
     
 on boot
     # ZRAM
-    swapon_all /vendor/fstab.enableswap
+    rm /data/unencrypted/zram_swap
+    swapon_all /vendor/etc/fstab.mt6893
+    write /proc/sys/vm/swappiness 100
+
+    # start EAS+
+    write /sys/devices/system/cpu/eas/enable 1
+
+    # Touchpanel
+    write /proc/touchpanel/oplus_tp_limit_enable 0
+    write /proc/touchpanel/oplus_tp_direction 1
+
+    chown root root /sys/module/ged/parameters/gx_force_cpu_boost
+    chown root root /proc/cpufreq/cpufreq_power_mode
+    chown root root /proc/cpufreq/cpufreq_cci_mode
 
 service prop-adap-core-gsi /odm/bin/self-init gsicore
     class core
