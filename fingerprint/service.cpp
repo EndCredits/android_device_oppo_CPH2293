@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The AOSP Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.CPH2293"
+#define LOG_TAG "android.hardware.biometeics.fingerprint@2.3-service.CPH2293"
 
 #include <android-base/logging.h>
-#include <hidl/HidlSupport.h>
 #include <hidl/HidlTransportSupport.h>
-#include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
 #include "BiometricsFingerprint.h"
+
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
 
 using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
 using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
-using android::sp;
 
 using android::OK;
 using android::status_t;
@@ -34,7 +32,7 @@ using android::status_t;
 int main() {
     android::sp<IBiometricsFingerprint> service = new BiometricsFingerprint();
 
-    configureRpcThreadpool(1, true /*callerWillJoin*/);
+    configureRpcThreadpool(1, true);
 
     status_t status = service->registerAsService();
     if (status != OK) {

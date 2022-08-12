@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 The AOSP Project
+// Copyright (C) 2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,22 +17,20 @@ cc_binary {
     name: "android.hardware.biometrics.fingerprint@2.3-service.CPH2293",
     defaults: ["hidl_defaults"],
     init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.CPH2293.rc"],
-    relative_install_path: "hw",
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.CPH2293.xml"],
+    relative_install_path: "hw",
     srcs: [
-        "BiometricsFingerprint.cpp",
         "service.cpp",
+        "BiometricsFingerprint.cpp",
     ],
     cflags: [
         "-Wno-unused-parameter",
     ],
     shared_libs: [
-        "libcutils",
-        "liblog",
-        "libhidlbase",
-        "libhardware",
-        "libutils",
         "libbase",
+        "libhidlbase",
+        "liblog",
+        "libutils",
         "android.hardware.biometrics.fingerprint@2.1",
         "android.hardware.biometrics.fingerprint@2.2",
         "android.hardware.biometrics.fingerprint@2.3",
