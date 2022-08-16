@@ -42,11 +42,7 @@ AB_OTA_UPDATER := false
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.a2dp.default
-
+	
 # Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
