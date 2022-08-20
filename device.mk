@@ -19,6 +19,9 @@ DEVICE_PATH := device/oppo/OPH2293
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
+# Inherit dalvik-heap device configs for 12 GiB devices 
+$(call inherit-product, frameworks/native/build/phone-xhdpi-12288-dalvik-heap.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Call proprietary blob setup
