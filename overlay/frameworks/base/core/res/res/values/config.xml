@@ -486,4 +486,7 @@
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
 
+     <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">alps/vnd_oplus6893/oplus6893:11/RP1A.200720.011/1647329937385:user/release-keys</string>
+
 </resources>
