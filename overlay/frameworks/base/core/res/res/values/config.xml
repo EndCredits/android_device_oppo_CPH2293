@@ -297,7 +297,7 @@
           appended after the path string to interpret coordinates in dp instead of px units.
           Note that a physical cutout should be configured in pixels for the best results.
      -->
-     <string name="config_mainBuiltInDisplayCutout">M -540,0 L -540,107 L -390,107 L -390,0 Z/string>
+     <string name="config_mainBuiltInDisplayCutout">M -540,0 L -540,107 L -390,107 L -390,0 Z</string>
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
      <integer name="config_shutdownBatteryTemperature">680</integer>
