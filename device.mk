@@ -27,6 +27,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Call proprietary blob setup
 $(call inherit-product-if-exists, vendor/oppo/CPH2293/CPH2293-vendor.mk)
 
+$(call inherit-product, vendor/oppo/IMS-CPH2293/mtk-ims.mk)
+
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -128,15 +130,6 @@ PRODUCT_PACKAGES += \
     libshim_vtservice
 
 # Telephony
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
-
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
