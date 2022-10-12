@@ -22,12 +22,14 @@ lib/libmtkperf_client.so
 lib/libvcodec_cap.so
 lib/libvcodec_capenc.so
 lib/libvt_avsync.so
+lib/libsysenv_system.so
 lib64/libmtk_vt_wrapper.so
 lib64/libaudioutilmtk.so
 lib64/libmtkavenhancements.so
 lib64/libmtkperf_client.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
+lib64/libsysenv_system.so
 
 # IMS | From bomb RP1A.200720.011 release-keys
 lib/libcomutils.so|be7c7b0901119cb260186061b90ef5b6a8292ae2
