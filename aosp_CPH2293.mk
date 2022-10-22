@@ -27,12 +27,15 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_CPH2293
 PRODUCT_DEVICE := CPH2293
-PRODUCT_BRAND := oppo
+PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := OPPO Reno7 Pro 5G
-PRODUCT_MANUFACTURER := oppo
+PRODUCT_MANUFACTURER := OPPO
+
+TARGET_VENDOR := OPPO
+TARGET_VENDOR_PRODUCT_NAME := CPH2293
 
 # Build info
-BUILD_FINGERPRINT := "google/coral/coral:13/TP1A.220905.004/8927612:user/release-keys"
+BUILD_FINGERPRINT := "OPPO/CPH2293/OP52E1L1:11/RP1A.200720.011/1647329937385:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=CPH2293 \
     PRODUCT_NAME=CPH2293 \
