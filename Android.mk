@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),OPH2293)
+ifeq ($(TARGET_DEVICE),CPH2293)
 
 $(call add-radio-file,releasetools/dynamic-remove-oplus)
 
